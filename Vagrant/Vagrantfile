@@ -7,7 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :win2k12_vm1 do |win2k12_vm1_config|
     win2k12_vm1_config.vm.box = "kensykora/windows_2012_r2_standard"
-    win2k12_vm1_config.vm.box = "win2k12_vm1"
+    win2k12_vm1_config.vm.hostname = "win2k12-vm1"
     win2k12_vm1_config.vm.network :public_network
     win2k12_vm1_config.vm.network :forwarded_port, guest: 3389, host:33389
   end
